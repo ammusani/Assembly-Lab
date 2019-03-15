@@ -1,3 +1,6 @@
+.data
+
+.text
 main:
 	addi $s0, $zero, 32
 	addi $s3, $zero, 1
@@ -30,3 +33,5 @@ R:      sll $t2, $t2, 1
 EXIT:   sw $t3, 0x10000000
         sw $t4, 0x10000004
 
+li $v0, 10
+syscall
