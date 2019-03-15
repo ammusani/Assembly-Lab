@@ -1,3 +1,7 @@
+.data
+
+.text
+
 main:
 	addi $s0, $zero, 4
 	addi $s1, $zero, 3
@@ -12,3 +16,6 @@ main:
 
 	sub $s4, $t0, $t1
 	add $s4, $s4, $s2
+
+li $v0, 10
+syscall
