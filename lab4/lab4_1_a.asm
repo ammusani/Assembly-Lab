@@ -1,3 +1,7 @@
+.data
+
+.text
+
 main:
 
 	addiu $s0, $zero, 32
@@ -21,3 +25,5 @@ R:	sll $t2, $t2, 1
 	j P
 EXIT:	sw $t3, 0x10000000
 	sw $t4, 0x10000004 
+	li $v0, 10
+	syscall
