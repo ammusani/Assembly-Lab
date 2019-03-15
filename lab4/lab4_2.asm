@@ -44,16 +44,16 @@ main:
 		add $t2, $t0, $s2	#same as above for num2
 		lw  $t4, ($t2)
 
-		add $t5, $t3, $t4	#adding the part of num1 and num2
+		addu $t5, $t3, $t4	#adding the part of num1 and num2
 
-		slt $t6, $t5, $t3	#checking if the sum stored is less than any of the original numbers
-		slt $t7, $t5, $t4
+		sltu $t6, $t5, $t3	#checking if the sum stored is less than any of the original numbers
+		sltu $t7, $t5, $t4
 
 		or $t8, $t7, $t8	#if yes, the carry is stored in $t8
 
 		add $t2, $t0, $s0	#loading address of the sum
 		lw  $t9, ($t2)		#loading the part of the sum to be modified
-		add $t5, $t5, $t9	#modifying the sum through addition cause may be the carry was there with it
+		addu $t5, $t5, $t9	#modifying the sum through addition cause may be the carry was there with it
 		sw  $t5, ($t2)		#storing back the number
 
 		addi $t0, $t0, 4	#incrementing the addition
