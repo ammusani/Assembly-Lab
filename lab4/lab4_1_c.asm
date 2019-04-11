@@ -1,4 +1,5 @@
 .data
+<<<<<<< HEAD
 .text
         main:
                 addi $s0, $zero, 32
@@ -8,6 +9,18 @@
                 addiu $t2, $zero, 1
                 addiu $t3, $zero, 0
                 addiu $t4, $zero, 0
+=======
+
+.text
+main:
+	addi $s0, $zero, 32
+	addi $s3, $zero, 1
+        li $s1, 0x0001
+        addi $t1, $zero, 32
+        addiu $t2, $zero, 1
+        addiu $t3, $zero, 0
+        addiu $t4, $zero, 0
+>>>>>>> 7fd535fbc92e1a46a32f705cc608888a15624e24
 
         P:      
                 beq $t1, $zero, EXIT
@@ -41,3 +54,5 @@
         li $v0, 10
         syscall
 
+li $v0, 10
+syscall

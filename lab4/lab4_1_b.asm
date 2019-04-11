@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Checking whether the given number in register 1 is positive or negative, if negative store value 1 else 0 in register 2 
 
 .data
@@ -19,3 +20,18 @@
 
 	li $v0, 10						#system call instruction to exit
 	syscall							#making the system call
+=======
+.data
+
+.text
+main:
+	li $s0, 0x00AA
+	add $t1, 0x8000
+	and $t0, $t1, $s0
+	slt $s1, $zero, $t0
+
+EXIT:	sw $s0, 0x10000000
+	sw $s1, 0x10000004
+li $v0, 10
+syscall
+>>>>>>> 7fd535fbc92e1a46a32f705cc608888a15624e24

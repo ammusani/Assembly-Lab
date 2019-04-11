@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #This program counts & the number of 1's and 0's in the 32-bit number and stores it back into data-section of memory
+=======
+.data
+
+.text
+
+main:
+>>>>>>> 7fd535fbc92e1a46a32f705cc608888a15624e24
 
 .data
 .text
@@ -20,6 +28,7 @@
 	Q:
 		addiu $t3, $t3, 1		#incrementing # of zeroes
 
+<<<<<<< HEAD
 	R:
 		sll $t2, $t2, 1			#shifting $t2 left, so now next bit will be masked
 		addi $t1, $t1, -1		#decrementing the counter
@@ -30,3 +39,12 @@
 
 	li $v0, 10					#storing exit value to $v0
 	syscall						#system call according the value stored into $v0
+=======
+R:	sll $t2, $t2, 1
+	addi $t1, $t1, -1
+	j P
+EXIT:	sw $t3, 0x10000000
+	sw $t4, 0x10000004 
+	li $v0, 10
+	syscall
+>>>>>>> 7fd535fbc92e1a46a32f705cc608888a15624e24
